@@ -1,12 +1,12 @@
-#Step 1: "Merge training and test sets to create singular data set."
+#Step 1: Merge training and test sets to create singular data set.
 # read subject training data
     subject_train = read.table("UCI HAR Dataset/train/subject_train.txt", col.names=c("subject_id"))
     subject_train$ID <- as.numeric(rownames(subject_train))
-# assign row number as the values of ID column
+# assign row number as values of ID column
     subject_train$ID <- as.numeric(rownames(subject_train))
 # read training data
     X_train = read.table("UCI HAR Dataset/train/X_train.txt")
-# assign row number as the values of ID column
+# assign row number as values of ID column
     X_train$ID <- as.numeric(rownames(X_train))
 # read activity training data
     y_train = read.table("UCI HAR Dataset/train/y_train.txt", col.names=c("activity_id"))  # max = 6
